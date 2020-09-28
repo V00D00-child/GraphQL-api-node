@@ -1,0 +1,20 @@
+{
+    __schema {
+        types {
+            name
+        }
+    }
+}
+
+{
+    __type(name: "Session") {
+        name
+        fields {
+            name
+            type {
+                name
+                kind
+            }
+        }
+    }
+}
