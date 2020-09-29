@@ -18,3 +18,14 @@
         }
     }
 }
+
+
+query {
+  sessions {
+    title
+    room 
+    track
+    id
+    level
+  }
+}
