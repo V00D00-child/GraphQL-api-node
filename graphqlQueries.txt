@@ -6,6 +6,7 @@
     }
 }
 
+
 {
     __type(name: "Session") {
         name
@@ -31,8 +32,6 @@ query {
 }
 
 
-
-
 query{
   sessionById(id: "84473") {
       title
@@ -48,5 +47,31 @@ query{
     track
     id
     level
+  }
+}
+
+
+query{
+  sessionById(id: "84473") {
+      title
+      room 
+      track
+      id
+      level
+    	description
+    	speakers {
+        name
+      }
+    
+  }
+  sessions(room: "Europa", track: ".NET") {
+    title
+    room 
+    track
+    id
+    level
+  }
+  speakers{
+    name
   }
 }

@@ -15,8 +15,18 @@ type Query {
         track: String 
         level:String
     ): [Session],
-    sessionById(id: ID): Session
+    sessionById(id: ID): Session,
+    speakers: [Speaker],
+    speakerById(id: ID): Speaker
 }
+
+type Speaker {
+    id: ID!
+    bio: String
+    name: String
+    sessions: [Session]
+}
+
 type Session {
     id: ID!
     title: String!
@@ -31,4 +41,5 @@ type Session {
         reason:"Too many seesion do not fit into a single track, we will be mirating to a tags based system the future..."
         )
     level:String
+    speakers: [Speaker]
 }`;
